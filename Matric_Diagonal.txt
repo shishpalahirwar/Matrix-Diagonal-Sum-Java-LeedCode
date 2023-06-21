@@ -3,11 +3,14 @@
         int n= mat.length;
         int result=0;
         for(int i=0; i<n;i++){
+            // Primary Diagonal
             result +=mat[i][i];
+           //Secondary diagonal
             result +=mat[n-i-1][i];
-
         }
+        //n is Odd
         if(n%2 !=0){
+        // substract the respreted elemnets
             result=result-mat[n/2][n/2];
         }
         return result;
